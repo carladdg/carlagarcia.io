@@ -1,0 +1,33 @@
+.Home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    padding: 0 20px;
+    
+    background-color: var(--buttermilk);
+}
+
+.Home-name {
+    margin: 7px 0;
+    text-align: center;
+}
+
+.Home-blurb {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.Home-headshot {
+    width: 250px;
+    border-radius: 50%;
+    border: 2px solid var(--navy);
+}
+
+.Home-button-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

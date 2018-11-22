@@ -1,0 +1,56 @@
+.Home-button {
+    margin: 0 10px 10px 10px;
+    padding: 10px 25px;
+    width: 200px;
+
+    border: 2px solid;
+    font-size: 20px;
+    color: var(--navy);
+
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+}
+.Home-button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.About-button {
+    border-color: var(--pink);
+}
+.About-button:hover {
+    background-color: var(--pink);
+}
+.About-button:active, .About-button:focus {
+    outline-color: var(--pink);
+}
+
+.Resume-button {
+    border-color: var(--blue);
+}
+.Resume-button:hover {
+    background-color: var(--blue);
+}
+.Resume-button:active, .Resume-button:focus {
+    outline-color: var(--blue);
+}
+
+.Portfolio-button {
+    border-color: var(--green);
+}
+.Portfolio-button:hover {
+    background-color: var(--green);
+}
+.Portfolio-button:active, .Portfolio-button:focus {
+    outline-color: var(--green);
+}
+
+.Contact-button {
+    border-color: var(--purple);
+}
+.Contact-button:hover {
+    background-color: var(--purple);
+}
+.Contact-button:active, .Contact-button:focus {
+    outline-color: var(--purple);
+}
