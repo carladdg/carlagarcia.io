@@ -6,6 +6,7 @@
     border: 2px solid;
     font-size: 20px;
     color: var(--navy);
+    background-color: var(--almostwhite);
 
     cursor: pointer;
     transition-duration: 0.4s;
