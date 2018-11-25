@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import styled, { ThemeProvider } from 'styled-components';
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
 import Home from './Home';
 
 const theme = {
@@ -12,21 +12,9 @@ const theme = {
     purpleColor: '#675682'
 }
 
-const AppWrapper = styled.div`
-    height: 100vh;
-    background-color: ${props => props.theme.yellowColor}
-`
-
-class App extends Component {
-    render() {
-        return (
-            <ThemeProvider theme={theme}>
-                <AppWrapper>
-                    <Home />
-                </AppWrapper>
-            </ThemeProvider>
-        );
-    }
-}
-
+const App = () => (
+    <ThemeProvider theme={theme}>
+        <Home />
+    </ThemeProvider>
+)
 export default App;

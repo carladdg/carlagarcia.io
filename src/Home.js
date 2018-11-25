@@ -20,6 +20,7 @@ const HomeWrapper = styled.div`
     height: 100vh;
     padding: 0 50px;
     text-align: center;
+    background-color: ${props => props.theme.yellowColor};
     color: ${props => props.theme.navyColor};
 `
 
