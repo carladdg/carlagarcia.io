@@ -16,7 +16,7 @@ const dropIn = keyframes`
 const HomeBackground = styled.div`
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 100%;
     text-align: center;
     background-color: ${props => props.theme.yellowColor};
     color: ${props => props.theme.navyColor};
