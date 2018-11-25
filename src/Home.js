@@ -2,27 +2,6 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import headshot from './headshot.jpg'
 
-const Home = () => (
-    <HomeWrapper>
-        <HomeHeader>
-            <Headshot src={headshot} alt='Carla Garcia' />
-            <Name>Carla Garcia</Name>
-            <code>full-stack web developer</code>
-        </HomeHeader>
-        <HomeButtons>
-            <StyledButton color='pink'>About</StyledButton>
-            <StyledButton color='blue'>Resume</StyledButton>
-            <StyledButton color='green'>Portfolio</StyledButton>
-            <StyledButton color='purple'>Contact</StyledButton>
-        </HomeButtons>
-    </HomeWrapper>
-)
-export default Home;
-
-// ------------------
-// Styled Components
-// ------------------
-
 const fadeIn = keyframes`
     from { opacity: 0; }
     to   { opacity: 1; } 
@@ -41,7 +20,7 @@ const HomeWrapper = styled.div`
     height: 100vh;
     padding: 0 50px;
     text-align: center;
-    color: var(--navy);
+    color: ${props => props.theme.navyColor};
 `
 
 const HomeHeader = styled.div`
@@ -51,7 +30,7 @@ const HomeHeader = styled.div`
 const Headshot = styled.img`
     width: 250px;
     border-radius: 50%
-    border: 2px solid var(--navy)
+    border: 2px solid ${props => props.theme.navyColor}
 `
 
 const Name = styled.h1`
@@ -70,20 +49,37 @@ const StyledButton = styled.button`
     width: 200px;
     margin: 0 10px 10px 10px;
     padding: 10px 25px;
-    border: 2px solid var(--${props => props.color});
-    background-color: var(--almostwhite);
+    border: 2px solid ${props => props.theme[props.color]};
+    background-color: ${props => props.theme.whiteColor};
     font-size: 20px;
-    color: var(--navy);
+    color: ${props => props.theme.navyColor};
     cursor: pointer;
     transition-duration: 0.4s;
     -webkit-transition-duration: 0.4s;
 
     :hover {
         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-        background-color: var(--${props => props.color});
+        background-color: ${props => props.theme[props.color]};
     }
 
     :active, :focus {
-        outline-color: var(--${props => props.color});
+        outline-color: ${props => props.theme[props.color]};
     }
 `
+
+const Home = () => (
+    <HomeWrapper>
+        <HomeHeader>
+            <Headshot src={headshot} alt='Carla Garcia' />
+            <Name>Carla Garcia</Name>
+            <code>full-stack web developer</code>
+        </HomeHeader>
+        <HomeButtons>
+            <StyledButton color='pinkColor'>About</StyledButton>
+            <StyledButton color='blueColor'>Resume</StyledButton>
+            <StyledButton color='greenColor'>Portfolio</StyledButton>
+            <StyledButton color='purpleColor'>Contact</StyledButton>
+        </HomeButtons>
+    </HomeWrapper>
+)
+export default Home;
