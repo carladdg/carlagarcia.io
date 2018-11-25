@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import headshot from './headshot.jpg'
+import Footer from './Footer';
 
 const fadeIn = keyframes`
     from { opacity: 0; }
@@ -12,16 +13,22 @@ const dropIn = keyframes`
     to   { transform: translateY(0%); } } 
 `
 
-const HomeWrapper = styled.div`
+const HomeBackground = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    background-color: ${props => props.theme.yellowColor};
+    color: ${props => props.theme.navyColor};
+`
+
+const HomeContent = styled.div`
+    flex: 1 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    padding: 0 50px;
-    text-align: center;
-    background-color: ${props => props.theme.yellowColor};
-    color: ${props => props.theme.navyColor};
+    padding: 50px;
 `
 
 const HomeHeader = styled.div`
@@ -69,18 +76,21 @@ const StyledButton = styled.button`
 `
 
 const Home = () => (
-    <HomeWrapper>
-        <HomeHeader>
-            <Headshot src={headshot} alt='Carla Garcia' />
-            <Name>Carla Garcia</Name>
-            <code>full-stack web developer</code>
-        </HomeHeader>
-        <HomeButtons>
-            <StyledButton color='pinkColor'>About</StyledButton>
-            <StyledButton color='blueColor'>Resume</StyledButton>
-            <StyledButton color='greenColor'>Portfolio</StyledButton>
-            <StyledButton color='purpleColor'>Contact</StyledButton>
-        </HomeButtons>
-    </HomeWrapper>
+    <HomeBackground>
+        <HomeContent>
+            <HomeHeader>
+                <Headshot src={headshot} alt='Carla Garcia' />
+                <Name>Carla Garcia</Name>
+                <code>full-stack web developer</code>
+            </HomeHeader>
+            <HomeButtons>
+                <StyledButton color='pinkColor'>About</StyledButton>
+                <StyledButton color='blueColor'>Resume</StyledButton>
+                <StyledButton color='greenColor'>Portfolio</StyledButton>
+                <StyledButton color='purpleColor'>Contact</StyledButton>
+            </HomeButtons>
+        </HomeContent>
+        <Footer />
+    </HomeBackground>
 )
 export default Home;
