@@ -1,7 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import headshot from './headshot.jpg'
-import Footer from './Footer';
 
 const fadeIn = keyframes`
     from { opacity: 0; }
@@ -16,21 +15,15 @@ const dropIn = keyframes`
 const HomeWrapper = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-height: 100%;
     text-align: center;
     color: ${props => props.theme.navyColor}
 `
 
-const HomeContent = styled.div`
-    flex: 1 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-`
-
 const HomeHeader = styled.div`
+    padding: 50px 50px 0;
     animation: ${dropIn} 2s, ${fadeIn} 3s;
 `
 
@@ -45,10 +38,7 @@ const Name = styled.h1`
 `
 
 const HomeButtons = styled.div`
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding-top: 40px;
+    padding: 40px 50px;
     animation: ${dropIn} 2s, ${fadeIn} 3s;
 `
 
@@ -76,20 +66,17 @@ const StyledButton = styled.button`
 
 const Home = () => (
     <HomeWrapper>
-        <HomeContent>
-            <HomeHeader>
-                <Headshot src={headshot} alt='Carla Garcia' />
-                <Name>Carla Garcia</Name>
-                <code>full-stack web developer</code>
-            </HomeHeader>
-            <HomeButtons>
-                <a href='#about'><StyledButton color='pinkColor'>About</StyledButton></a>
-                {/* <StyledButton color='blueColor'>Resume</StyledButton> */}
-                <a href='#portfolio'><StyledButton color='greenColor'>Portfolio</StyledButton></a>
-                {/* <StyledButton color='yellowColor'>Contact</StyledButton> */}
-            </HomeButtons>
-        </HomeContent>
-        <Footer />
+        <HomeHeader>
+            <Headshot src={headshot} alt='Carla Garcia' />
+            <Name>Carla Garcia</Name>
+            <code>full-stack web developer</code>
+        </HomeHeader>
+        <HomeButtons>
+            <a href='#about'><StyledButton color='pinkColor'>About</StyledButton></a>
+            {/* <StyledButton color='blueColor'>Resume</StyledButton> */}
+            <a href='#portfolio'><StyledButton color='greenColor'>Portfolio</StyledButton></a>
+            {/* <StyledButton color='yellowColor'>Contact</StyledButton> */}
+        </HomeButtons>
     </HomeWrapper>
 )
 export default Home;

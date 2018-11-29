@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import Home from './Home';
 import About from './About';
 import Portfolio from './Portfolio';
+import Footer from './Footer';
 
 const theme = {
     navyColor: '#343959',
@@ -19,6 +20,7 @@ const App = () => (
             <Home />
             <About />
             <Portfolio />
+            <Footer />
         </React.Fragment>
     </ThemeProvider>
 )
