@@ -1,6 +1,8 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import Home from './Home';
+import About from './About';
+import Portfolio from './Portfolio';
 
 const theme = {
     navyColor: '#343959',
@@ -13,7 +15,11 @@ const theme = {
 
 const App = () => (
     <ThemeProvider theme={theme}>
-        <Home />
+        <React.Fragment>
+            <Home />
+            <About />
+            <Portfolio />
+        </React.Fragment>
     </ThemeProvider>
 )
 export default App;

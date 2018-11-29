@@ -13,7 +13,7 @@ const dropIn = keyframes`
     to   { transform: translateY(0%); } } 
 `
 
-const HomeBackground = styled.div`
+const HomeWrapper = styled.div`
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -75,7 +75,7 @@ const StyledButton = styled.button`
 `
 
 const Home = () => (
-    <HomeBackground>
+    <HomeWrapper>
         <HomeContent>
             <HomeHeader>
                 <Headshot src={headshot} alt='Carla Garcia' />
@@ -83,13 +83,13 @@ const Home = () => (
                 <code>full-stack web developer</code>
             </HomeHeader>
             <HomeButtons>
-                <StyledButton color='pinkColor'>About</StyledButton>
-                <StyledButton color='blueColor'>Resume</StyledButton>
-                <StyledButton color='greenColor'>Portfolio</StyledButton>
-                <StyledButton color='yellowColor'>Contact</StyledButton>
+                <a href='#about'><StyledButton color='pinkColor'>About</StyledButton></a>
+                {/* <StyledButton color='blueColor'>Resume</StyledButton> */}
+                <a href='#portfolio'><StyledButton color='greenColor'>Portfolio</StyledButton></a>
+                {/* <StyledButton color='yellowColor'>Contact</StyledButton> */}
             </HomeButtons>
         </HomeContent>
         <Footer />
-    </HomeBackground>
+    </HomeWrapper>
 )
 export default Home;
