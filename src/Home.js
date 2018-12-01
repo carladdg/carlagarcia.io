@@ -13,7 +13,6 @@ const dropIn = keyframes`
 
 const HomeWrapper = styled.section`
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100%;
@@ -26,9 +25,17 @@ const HomeWrapper = styled.section`
     animation: ${fadeIn} 1s
 `
 
+const HomeContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 250px;
+`
+
 const HomeTextBackground = styled.div`
-    background-color: ${props => props.theme.silverColor};
     margin-bottom: 20px;
+    background-color: ${props => props.theme.silverColor};
     animation: ${dropIn} 2s, ${fadeIn} 3s;
 `
 
@@ -49,12 +56,14 @@ const StyledBlurb = styled.p`
 
 const Home = () => (
     <HomeWrapper>
-        <HomeTextBackground>
-            <StyledName>Carla Garcia</StyledName>
-        </HomeTextBackground>
-        <HomeTextBackground>
-            <StyledBlurb>full-stack web developer</StyledBlurb>
-        </HomeTextBackground>
+        <HomeContent>
+            <HomeTextBackground>
+                <StyledName>Carla Garcia</StyledName>
+            </HomeTextBackground>
+            <HomeTextBackground>
+                <StyledBlurb>full-stack web developer</StyledBlurb>
+            </HomeTextBackground>
+        </HomeContent>
     </HomeWrapper>
 )
 export default Home;

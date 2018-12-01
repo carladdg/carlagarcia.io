@@ -33,8 +33,8 @@ class Nav extends Component {
     render = () => (
         <StyledNav pageScroll={this.state.pageScroll}>
             <p>Home</p>
-            <a href="#about"><p>About</p></a>
-            <a href="#portfolio"><p>Portfolio</p></a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
         </StyledNav>
     )
 }
