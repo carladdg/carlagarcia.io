@@ -47,11 +47,14 @@ const SharedTextStyle = css`
 
 const StyledName = styled.h1`
     ${SharedTextStyle}
+    font-family: ${props => props.theme.latoFont};
     font-size: 3em;
 `
 
 const StyledBlurb = styled.p`
     ${SharedTextStyle}
+    font-family: ${props => props.theme.karlaFont};
+    font-size: 1.25em;
 `
 
 const Home = () => (

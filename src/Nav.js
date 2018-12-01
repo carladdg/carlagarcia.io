@@ -10,6 +10,7 @@ const StyledNav = styled.nav`
     height: 60px;
     width: 100%;
     background-color: ${props => props.scroll ? 'rgba(0, 0, 0, 0.3)' : 'transparent'};
+    font-family: ${props => props.theme.karlaFont};
     transition: background-color 1s;
 `
 
@@ -32,6 +33,7 @@ const NavLink = styled.a`
     :hover {
         border-bottom: 1px solid ${props => props.scroll ? props.theme.navyColor : 'white'};
     }
+
 `
 
 class Nav extends Component {
@@ -62,11 +64,11 @@ class Nav extends Component {
     
     render = () => (
         <StyledNav scroll={this.state.scroll}>
-            <NavLink href='#about' scroll={this.state.scroll}>About</NavLink>
-            <NavLink href='#portfolio' scroll={this.state.scroll}>Portfolio</NavLink>        
+            <NavLink href='#about' scroll={this.state.scroll}>ABOUT</NavLink>
+            <NavLink href='#portfolio' scroll={this.state.scroll}>PORTFOLIO</NavLink>        
             <a href='#home'><NavLogo src={this.state.logo} scroll={this.state.scroll} alt='Carla Garcia' /></a>
-            <NavLink href='#home' scroll={this.state.scroll}>Resume</NavLink>
-            <NavLink href='#home' scroll={this.state.scroll}>Contact</NavLink>
+            <NavLink href='#home' scroll={this.state.scroll}>RESUME</NavLink>
+            <NavLink href='#home' scroll={this.state.scroll}>CONTACT</NavLink>
         </StyledNav>
     )
 }

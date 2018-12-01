@@ -13,6 +13,8 @@ const theme = {
     pinkColor: '#FA7C92',
     blueColor: '#6EC4DB',
     greenColor: '#66AB8C',
+    karlaFont: 'Karla, sans-serif',
+    latoFont: 'Lato, sans-serif',
 }
 
 const App = () => (
