@@ -17,12 +17,13 @@ const HomeWrapper = styled.section`
     justify-content: center;
     align-items: center;
     min-height: 100%;
-    background-image: url('./main-image.JPG');
+    background-image: url('./main-image.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 30% 50%;
     text-align: center;
     color: ${props => props.theme.navyColor};
+    animation: ${fadeIn} 1s
 `
 
 const HomeTextBackground = styled.div`
