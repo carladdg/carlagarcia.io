@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const PortfolioWrapper = styled.div`
+const PortfolioWrapper = styled.section`
     min-height: 100%;
     background-color: yellow;
 `
