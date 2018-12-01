@@ -19,7 +19,7 @@ const HomeWrapper = styled.section`
     background-image: url('./main-image.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 30% 50%;
+    background-position: 30% 60%;
     text-align: center;
     color: ${props => props.theme.navyColor};
     animation: ${fadeIn} 1s
@@ -55,7 +55,7 @@ const StyledBlurb = styled.p`
 `
 
 const Home = () => (
-    <HomeWrapper>
+    <HomeWrapper id='home'>
         <HomeContent>
             <HomeTextBackground>
                 <StyledName>Carla Garcia</StyledName>
