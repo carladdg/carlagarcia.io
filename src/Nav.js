@@ -67,8 +67,8 @@ class Nav extends Component {
             <NavLink href='#about' scroll={this.state.scroll}>ABOUT</NavLink>
             <NavLink href='#portfolio' scroll={this.state.scroll}>PORTFOLIO</NavLink>        
             <a href='#home'><NavLogo src={this.state.logo} scroll={this.state.scroll} alt='Carla Garcia' /></a>
-            <NavLink href='#home' scroll={this.state.scroll}>RESUME</NavLink>
-            <NavLink href='#home' scroll={this.state.scroll}>CONTACT</NavLink>
+            <NavLink href='#resume' scroll={this.state.scroll}>RESUME</NavLink>
+            <NavLink href='#contact' scroll={this.state.scroll}>CONTACT</NavLink>
         </StyledNav>
     )
 }
