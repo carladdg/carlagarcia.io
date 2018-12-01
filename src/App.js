@@ -1,5 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import Nav from './Nav';
 import Home from './Home';
 import About from './About';
 import Portfolio from './Portfolio';
@@ -17,6 +18,7 @@ const theme = {
 const App = () => (
     <ThemeProvider theme={theme}>
         <React.Fragment>
+            <Nav />
             <Home />
             <About />
             <Portfolio />
