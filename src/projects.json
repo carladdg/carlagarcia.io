@@ -1,0 +1,61 @@
+[
+    {
+        "id": 10,
+        "name": "Jamspot Social Network",
+        "link": "http://jamspot-nu.herokuapp.com/",
+        "github": "https://github.com/curiouskittens/jamspot"
+    },
+    {
+        "id": 9,
+        "name": "Brooklyn Nine-Nine Clicky Game",
+        "link": "https://carladdg.github.io/clicky-game/",
+        "github": "https://github.com/carladdg/clicky-game"
+    },
+    {
+        "id": 8,
+        "name": "TechCrunch News Scraper",
+        "link": "https://news-scraper-nu.herokuapp.com/",
+        "github": "https://github.com/carladdg/news-scraper"
+    },
+    {
+        "id": 7,
+        "name": "SETLISTr: A Concert Playlist Maker",
+        "link": "https://setlistr-nu.herokuapp.com/",
+        "github": "https://github.com/turnupthebase/setlistr"
+    },
+    {
+        "id": 6,
+        "name": "Command-Line Storefront",
+        "github": "https://github.com/carladdg/bamazon"
+    },
+    {
+        "id": 5,
+        "name": "Wanderlust Travel Helper",
+        "link": "https://patsajax.github.io/wanderlust/",
+        "github": "https://github.com/patsajax/wanderlust"
+    },
+    {
+        "id": 4,
+        "name": "Animal GIF Generator",
+        "link": "https://carladdg.github.io/gif-generator/",
+        "github": "https://github.com/carladdg/gif-generator"
+    },
+    {
+        "id": 3,
+        "name": "Harry Potter Trivia Game",
+        "link": "https://carladdg.github.io/trivia-game/",
+        "github": "https://github.com/carladdg/trivia-game"
+    },
+    {
+        "id": 2,
+        "name": "Star Wars RPG",
+        "link": "https://carladdg.github.io/star-wars-game/",
+        "github": "https://github.com/carladdg/star-wars-game"
+    },
+    {
+        "id": 1,
+        "name": "The Oscars Hangman Game",
+        "link": "https://carladdg.github.io/hangman-game/",
+        "github": "https://github.com/carladdg/hangman-game"
+    }
+]
