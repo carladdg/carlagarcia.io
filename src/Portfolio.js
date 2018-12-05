@@ -34,27 +34,31 @@ const PortfolioProject = styled.div`
     border-radius: 25px;
 `
 
+const ProjectImage = styled.img`
+    position: absolute;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+`
+
 const ProjectInfo = styled.div`
     position: absolute;
     top: 0;
+    z-index: 20;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     width: 100%;
     border-radius: 25px;
     background-color: green;
-`
-
-const ProjectImage = styled.img`
-    position: absolute;
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-    border-radius: 25px;
+    opacity: 0;
     transition: opacity 0.3s;
 
     :hover {
-        opacity: 0;
+        opacity: 1;
     }
 `
 
