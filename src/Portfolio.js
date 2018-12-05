@@ -4,7 +4,6 @@ import projects from './projects.json';
 
 const PortfolioWrapper = styled.section`
     min-height: 100%;
-    background-color: ${props => props.theme.silverColor};
 `
 
 const PortfolioContent = styled.div`
@@ -13,6 +12,8 @@ const PortfolioContent = styled.div`
 
 const PortfolioTitle = styled.h1`
     margin: 0 0 50px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid ${props => props.theme.silverColor};
     font-family: ${props => props.theme.latoFont};
     font-size: 2em;
     color: ${props => props.theme.navyColor};
@@ -26,11 +27,43 @@ const PortfolioProjects = styled.div`
 `
 
 const PortfolioProject = styled.div`
-    width: 300px;
-    height: 200px;
+    position: relative;
+    height: 250px;
+    width: 350px;
     margin: 0 15px 25px;
     border-radius: 25px;
-    background-color: yellow;
+`
+
+const ProjectInfo = styled.div`
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    background-color: green;
+`
+
+const ProjectImage = styled.img`
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    transition: opacity 0.3s;
+
+    :hover {
+        opacity: 0;
+    }
+`
+
+const ProjectName = styled.p`
+    margin: 0;
+`
+
+const ProjectButton = styled.button`
+    cursor: pointer;
 `
 
 const Portfolio = () => (
@@ -40,11 +73,16 @@ const Portfolio = () => (
             <PortfolioProjects>
                 {projects.map(project => (
                     <PortfolioProject key={project.id}>
-                        <a href={project.link} target='_blank' rel='noopener noreferrer'>
-                            {project.name}
-                        </a>
-                        <br></br>
-                        <a href={project.github} target='_blank' rel='noopener noreferrer'>Check out the code.</a>
+                        <ProjectImage src={project.image} alt={project.name} />
+                        <ProjectInfo>
+                            <ProjectName>{project.name}</ProjectName>
+                            <a href={project.link} target='_blank' rel='noopener noreferrer'>
+                                <ProjectButton>SEE PROJECT</ProjectButton>
+                            </a>
+                            <a href={project.github} target='_blank' rel='noopener noreferrer'>
+                                <ProjectButton>SEE CODE</ProjectButton>
+                            </a>
+                        </ProjectInfo>
                     </PortfolioProject>
                 ))}
             </PortfolioProjects>
