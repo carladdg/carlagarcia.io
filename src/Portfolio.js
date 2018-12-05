@@ -80,9 +80,11 @@ const Portfolio = () => (
                         <ProjectImage src={project.image} alt={project.name} />
                         <ProjectInfo>
                             <ProjectName>{project.name}</ProjectName>
-                            <a href={project.link} target='_blank' rel='noopener noreferrer'>
-                                <ProjectButton>SEE PROJECT</ProjectButton>
-                            </a>
+                            {project.link && (
+                                <a href={project.link} target='_blank' rel='noopener noreferrer'>
+                                    <ProjectButton>SEE PROJECT</ProjectButton>
+                                </a>
+                            )}
                             <a href={project.github} target='_blank' rel='noopener noreferrer'>
                                 <ProjectButton>SEE CODE</ProjectButton>
                             </a>
