@@ -53,7 +53,7 @@ const ProjectInfo = styled.div`
     height: 100%;
     width: 100%;
     border-radius: 25px;
-    background-color: green;
+    background-color: rgba(0, 0, 30, 0.93);
     opacity: 0;
     transition: opacity 0.3s;
 
@@ -64,11 +64,27 @@ const ProjectInfo = styled.div`
 
 const ProjectName = styled.p`
     margin: 0;
+    padding: 10px;
+    text-align: center;
     font-family: ${props => props.theme.latoFont};
+    font-size: 1.5em;
+    color: ${props => props.theme.silverColor};
 `
 
 const ProjectButton = styled.a`
+    margin: 5px;
+    padding: 10px 30px;
+    border: 2px solid ${props => props.theme.silverColor};
+    border-radius: 5px;
     font-family: ${props => props.theme.karlaFont};
+    color: ${props => props.theme.silverColor};
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.7s;
+
+    :hover {
+        background-color: ${props => props.theme.silverColor};
+        color: ${props => props.theme.navyColor};
+    }
 `
 
 const Portfolio = () => (

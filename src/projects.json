@@ -9,6 +9,7 @@
     {
         "id": 9,
         "name": "Brooklyn Nine-Nine Clicky Game",
+        "image": "./project_images/clicky-game.png",
         "link": "https://carladdg.github.io/clicky-game/",
         "github": "https://github.com/carladdg/clicky-game"
     },
@@ -20,7 +21,7 @@
     },
     {
         "id": 7,
-        "name": "SETLISTr: A Concert Playlist Maker",
+        "name": "SETLISTr Concert Playlist Maker",
         "link": "https://setlistr-nu.herokuapp.com/",
         "github": "https://github.com/turnupthebase/setlistr"
     },
@@ -32,6 +33,7 @@
     {
         "id": 5,
         "name": "Wanderlust Travel Helper",
+        "image": "./project_images/wanderlust.png",
         "link": "https://patsajax.github.io/wanderlust/",
         "github": "https://github.com/patsajax/wanderlust"
     },
