@@ -66,8 +66,12 @@ const ProjectName = styled.p`
     margin: 0;
 `
 
-const ProjectButton = styled.button`
-    cursor: pointer;
+const ProjectButton = styled.a`
+    pointer-events: none;
+
+    ${ProjectInfo}:hover & {
+        pointer-events: auto;
+    }
 `
 
 const Portfolio = () => (
@@ -81,13 +85,9 @@ const Portfolio = () => (
                         <ProjectInfo>
                             <ProjectName>{project.name}</ProjectName>
                             {project.link && (
-                                <a href={project.link} target='_blank' rel='noopener noreferrer'>
-                                    <ProjectButton>SEE PROJECT</ProjectButton>
-                                </a>
+                                <ProjectButton href={project.link} target='_blank' rel='noopener noreferrer'>SEE PROJECT</ProjectButton>
                             )}
-                            <a href={project.github} target='_blank' rel='noopener noreferrer'>
-                                <ProjectButton>SEE CODE</ProjectButton>
-                            </a>
+                            <ProjectButton href={project.github} target='_blank' rel='noopener noreferrer'>SEE CODE</ProjectButton>
                         </ProjectInfo>
                     </PortfolioProject>
                 ))}
