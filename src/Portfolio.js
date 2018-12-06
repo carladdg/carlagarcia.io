@@ -64,14 +64,11 @@ const ProjectInfo = styled.div`
 
 const ProjectName = styled.p`
     margin: 0;
+    font-family: ${props => props.theme.latoFont};
 `
 
 const ProjectButton = styled.a`
-    pointer-events: none;
-
-    ${ProjectInfo}:hover & {
-        pointer-events: auto;
-    }
+    font-family: ${props => props.theme.karlaFont};
 `
 
 const Portfolio = () => (
