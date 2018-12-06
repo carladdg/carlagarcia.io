@@ -16,18 +16,21 @@
     {
         "id": 8,
         "name": "TechCrunch News Scraper",
+        "image": "./project_images/news-scraper.png",
         "link": "https://news-scraper-nu.herokuapp.com/",
         "github": "https://github.com/carladdg/news-scraper"
     },
     {
         "id": 7,
         "name": "SETLISTr Concert Playlist Maker",
+        "image": "./project_images/setlistr.png",
         "link": "https://setlistr-nu.herokuapp.com/",
         "github": "https://github.com/turnupthebase/setlistr"
     },
     {
         "id": 6,
         "name": "Command-Line Storefront",
+        "image": "./project_images/bamazon.png",
         "github": "https://github.com/carladdg/bamazon"
     },
     {
@@ -40,24 +43,28 @@
     {
         "id": 4,
         "name": "Animal GIF Generator",
+        "image": "./project_images/gif-generator.png",
         "link": "https://carladdg.github.io/gif-generator/",
         "github": "https://github.com/carladdg/gif-generator"
     },
     {
         "id": 3,
         "name": "Harry Potter Trivia Game",
+        "image": "./project_images/harry-potter.png",
         "link": "https://carladdg.github.io/trivia-game/",
         "github": "https://github.com/carladdg/trivia-game"
     },
     {
         "id": 2,
         "name": "Star Wars RPG",
+        "image": "./project_images/star-wars.png",
         "link": "https://carladdg.github.io/star-wars-game/",
         "github": "https://github.com/carladdg/star-wars-game"
     },
     {
         "id": 1,
         "name": "The Oscars Hangman Game",
+        "image": "./project_images/hangman.png",
         "link": "https://carladdg.github.io/hangman-game/",
         "github": "https://github.com/carladdg/hangman-game"
     }

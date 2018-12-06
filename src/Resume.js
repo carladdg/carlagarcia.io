@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const ResumeWrapper = styled.section`
     min-height: 100%;
-    background-color: red;
+    background-color: ${props => props.theme.navyColor};
 `
 
 const Resume = () => (

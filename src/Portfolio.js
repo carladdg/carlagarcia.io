@@ -4,6 +4,7 @@ import projects from './projects.json';
 
 const PortfolioWrapper = styled.section`
     min-height: 100%;
+    background-color: ${props => props.theme.silverColor};
 `
 
 const PortfolioContent = styled.div`
@@ -12,8 +13,8 @@ const PortfolioContent = styled.div`
 
 const PortfolioTitle = styled.h1`
     margin: 0 0 50px;
-    padding-bottom: 3px;
-    border-bottom: 2px solid ${props => props.theme.silverColor};
+    padding-bottom: 10px;
+    border-bottom: 3px solid white;
     font-family: ${props => props.theme.latoFont};
     font-size: 2em;
     color: ${props => props.theme.navyColor};

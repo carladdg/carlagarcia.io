@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 const AboutWrapper = styled.section`
     min-height: 100%;
-    background-color: ${props => props.theme.silverColor};
 `
 
 const About = () => (

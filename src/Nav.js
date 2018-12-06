@@ -6,7 +6,7 @@ const StyledNav = styled.nav`
     justify-content: center;
     align-items: center;
     position: fixed;
-    z-index: 1;
+    z-index: 100;
     height: 60px;
     width: 100%;
     background-color: ${props => props.scroll ? 'rgba(0, 0, 0, 0.3)' : 'transparent'};
