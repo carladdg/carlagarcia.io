@@ -12,16 +12,28 @@ const StyledNav = styled.nav`
     background-color: ${props => props.scroll ? 'rgba(0, 0, 0, 0.3)' : 'transparent'};
     font-family: ${props => props.theme.karlaFont};
     transition: background-color 1s;
+
+    @media screen and (max-width: 480px) {
+        flex-direction: ${props => props.toggle ? 'column' : 'row'};
+        justify-content: space-between;
+    }
 `
 
-const NavLogo = styled.img`
-    width: 30px;
+const NavLogoLink = styled.a`
     margin: 0 20px;
 
     :hover {
         -webkit-filter: drop-shadow(0 0 2px ${props => props.scroll ? 'white' : props.theme.navyColor});
         filter: drop-shadow(0 0 2px ${props => props.scroll ? 'white' : props.theme.navyColor});
     }
+
+    @media screen and (max-width: 480px) {
+        order: -1;
+    }
+`
+
+const NavLogo = styled.img`
+    width: 30px;
 `
 
 const NavLink = styled.a`
@@ -34,6 +46,20 @@ const NavLink = styled.a`
         border-bottom: 1px solid ${props => props.scroll ? props.theme.navyColor : 'white'};
     }
 
+    @media screen and (max-width: 480px) {
+        display: ${props => props.toggle ? 'block' : 'none'};
+    }
+`
+
+const NavToggler = styled.i`
+    display: none;
+    margin: 0 20px;
+    padding-bottom: 3px;
+    color: ${props => props.scroll ? 'white' : props.theme.navyColor};
+
+    @media screen and (max-width: 480px) {
+        display: block;
+    }
 `
 
 class Nav extends Component {
@@ -41,6 +67,7 @@ class Nav extends Component {
         super(props);
         this.state = {
             scroll: false,
+            toggle: false,
             logo: './favicon.png'
         }
     }
@@ -61,14 +88,24 @@ class Nav extends Component {
             });
         }
     }
+
+    handleToggle = () => {
+        this.setState(prevState => ({ 
+            toggle: !prevState.toggle 
+        }));
+        console.log(this.state.toggle);
+    }
     
     render = () => (
-        <StyledNav scroll={this.state.scroll}>
-            <NavLink href='#about' scroll={this.state.scroll}>ABOUT</NavLink>
-            <NavLink href='#portfolio' scroll={this.state.scroll}>PORTFOLIO</NavLink>        
-            <a href='#home'><NavLogo src={this.state.logo} scroll={this.state.scroll} alt='Carla Garcia' /></a>
-            <NavLink href='#resume' scroll={this.state.scroll}>RESUME</NavLink>
-            <NavLink href='#contact' scroll={this.state.scroll}>CONTACT</NavLink>
+        <StyledNav scroll={this.state.scroll} toggle={this.state.toggle}>
+            <NavLink scroll={this.state.scroll} toggle={this.state.toggle} href='#about'>ABOUT</NavLink>
+            <NavLink scroll={this.state.scroll} toggle={this.state.toggle} href='#portfolio'>PORTFOLIO</NavLink>        
+            <NavLogoLink scroll={this.state.scroll} href='#home'>
+                <NavLogo src={this.state.logo} alt='Carla Garcia' />
+            </NavLogoLink>
+            <NavLink scroll={this.state.scroll} toggle={this.state.toggle} href='#resume'>RESUME</NavLink>
+            <NavLink scroll={this.state.scroll} toggle={this.state.toggle} href='#contact'>CONTACT</NavLink>
+            <NavToggler scroll={this.state.scroll} onClick={this.handleToggle} className="fas fa-bars fa-lg"></NavToggler>
         </StyledNav>
     )
 }
