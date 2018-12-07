@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
+import 'intersection-observer';
+import lozad from 'lozad';
 import { ThemeProvider } from 'styled-components';
 import Nav from './Nav';
 import Home from './Home';
@@ -16,17 +18,26 @@ const theme = {
     latoFont: 'Lato, sans-serif',
 }
 
-const App = () => (
-    <ThemeProvider theme={theme}>
-        <React.Fragment>
-            <Nav />
-            <Home />
-            <About />
-            <Portfolio />
-            <Resume />
-            <Contact />
-            <Footer />
-        </React.Fragment>
-    </ThemeProvider>
-)
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.observer = lozad();
+    }
+
+    componentDidMount = () => this.observer.observe();
+    
+    render = () => (
+        <ThemeProvider theme={theme}>
+            <React.Fragment>
+                <Nav />
+                <Home />
+                <About />
+                <Portfolio />
+                <Resume />
+                <Contact />
+                <Footer />
+            </React.Fragment>
+        </ThemeProvider>
+    )
+}
 export default App;

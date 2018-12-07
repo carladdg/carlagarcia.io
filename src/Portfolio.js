@@ -95,13 +95,13 @@ const Portfolio = () => (
             <PortfolioProjects>
                 {projects.map(project => (
                     <PortfolioProject key={project.id}>
-                        <ProjectImage src={project.image} alt={project.name} />
+                        <ProjectImage className='lozad' data-src={project.image} alt={project.name} />
                         <ProjectInfo>
                             <ProjectName>{project.name}</ProjectName>
                             {project.link && (
-                                <ProjectButton href={project.link} target='_blank' rel='noopener noreferrer'>SEE PROJECT</ProjectButton>
+                                <ProjectButton href={project.link} target='_blank' rel='noopener noreferrer'>VIEW PROJECT</ProjectButton>
                             )}
-                            <ProjectButton href={project.github} target='_blank' rel='noopener noreferrer'>SEE CODE</ProjectButton>
+                            <ProjectButton href={project.github} target='_blank' rel='noopener noreferrer'>VIEW CODE</ProjectButton>
                         </ProjectInfo>
                     </PortfolioProject>
                 ))}
