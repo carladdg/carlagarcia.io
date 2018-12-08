@@ -84,6 +84,11 @@ const ProjectName = styled.p`
     font-family: ${props => props.theme.latoFont};
     font-size: 1.5em;
     color: ${props => props.theme.silverColor};
+    transition: font-size 0.7s;
+
+    @media screen and (max-width: 360px) {
+        font-size: 1.25em;
+    }
 `
 
 const ProjectButton = styled.a`
@@ -94,11 +99,15 @@ const ProjectButton = styled.a`
     font-family: ${props => props.theme.karlaFont};
     color: ${props => props.theme.silverColor};
     text-decoration: none;
-    transition: color 0.3s, background-color 0.7s;
+    transition: color 0.3s, background-color 0.7s, font-size 0.7s;
 
     :hover {
         background-color: ${props => props.theme.silverColor};
         color: ${props => props.theme.navyColor};
+    }
+
+    @media screen and (max-width: 360px) {
+        font-size: 0.8em;
     }
 `
 

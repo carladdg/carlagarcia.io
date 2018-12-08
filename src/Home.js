@@ -44,18 +44,27 @@ const SharedTextStyle = css`
     margin: 0;
     padding: 15px 30px;
     animation: ${fadeIn} 3s;
+    transition: font-size 0.7s;
 `
 
 const StyledName = styled.h1`
     ${SharedTextStyle}
     font-family: ${props => props.theme.latoFont};
     font-size: 3em;
+
+    @media screen and (max-width: 340px) {
+        font-size: 2.5em;
+    }
 `
 
 const StyledBlurb = styled.p`
     ${SharedTextStyle}
     font-family: ${props => props.theme.karlaFont};
     font-size: 1.25em;
+
+    @media screen and (max-width: 340px) {
+        font-size: 1em;
+    }
 `
 
 const Home = () => (
