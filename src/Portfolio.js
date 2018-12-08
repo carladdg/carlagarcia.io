@@ -8,11 +8,11 @@ const PortfolioWrapper = styled.section`
 `
 
 const PortfolioContent = styled.div`
-    padding: 100px 100px 75px;
+    padding: 85px 100px 75px;
     transition: padding 0.7s;
 
     @media screen and (max-width: 560px) {
-        padding: 100px 30px 75px;
+        padding: 85px 30px 75px;
     }
 `
 
