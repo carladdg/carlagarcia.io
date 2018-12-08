@@ -9,6 +9,11 @@ const PortfolioWrapper = styled.section`
 
 const PortfolioContent = styled.div`
     padding: 100px 100px 75px;
+    transition: padding 0.7s;
+
+    @media screen and (max-width: 560px) {
+        padding: 100px 30px 75px;
+    }
 `
 
 const PortfolioTitle = styled.h1`
@@ -24,15 +29,24 @@ const PortfolioProjects = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0 50px;
 `
 
 const PortfolioProject = styled.div`
     position: relative;
     height: 250px;
-    width: 350px;
+    min-width: 350px;
     margin: 0 15px 25px;
     border-radius: 25px;
+    transition: 0.7s;
+
+    @media screen and (max-width: 400px) {
+        height: 220px;
+        min-width: 300px;
+    }
+    @media screen and (max-width: 360px) {
+        height: 180px;
+        min-width: 250px;
+    }
 `
 
 const ProjectImage = styled.img`

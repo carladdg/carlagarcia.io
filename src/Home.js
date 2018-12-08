@@ -30,7 +30,7 @@ const HomeContent = styled.div`
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    height: 250px;
+    height: 275px;
 `
 
 const HomeTextBackground = styled.div`

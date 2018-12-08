@@ -58,7 +58,7 @@ const NavLink = styled.a`
 
     @media screen and (max-width: 485px) {
         display: ${props => props.toggle ? 'block' : 'none'};
-        margin-top: 8px;
+        margin-top: 5px;
     }
 `
 
