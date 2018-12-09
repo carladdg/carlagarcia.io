@@ -1,29 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import projects from './projects.json';
-
-const PortfolioWrapper = styled.section`
-    min-height: 100%;
-    background-color: ${props => props.theme.silverColor};
-`
-
-const PortfolioContent = styled.div`
-    padding: 85px 100px 75px;
-    transition: padding 0.7s;
-
-    @media screen and (max-width: 560px) {
-        padding: 85px 30px 75px;
-    }
-`
-
-const PortfolioTitle = styled.h1`
-    margin: 0 0 50px;
-    padding-bottom: 10px;
-    border-bottom: 3px solid white;
-    font-family: ${props => props.theme.latoFont};
-    font-size: 2em;
-    color: ${props => props.theme.navyColor};
-`
+import Section from './Section';
 
 const PortfolioProjects = styled.div`
     display: flex;
@@ -112,24 +90,21 @@ const ProjectButton = styled.a`
 `
 
 const Portfolio = () => (
-    <PortfolioWrapper id='portfolio'>
-        <PortfolioContent>
-            <PortfolioTitle>Portfolio</PortfolioTitle>
-            <PortfolioProjects>
-                {projects.map(project => (
-                    <PortfolioProject key={project.id}>
-                        <ProjectImage className='lozad' data-src={project.image} alt={project.name} />
-                        <ProjectInfo>
-                            <ProjectName>{project.name}</ProjectName>
-                            {project.link && (
-                                <ProjectButton href={project.link} target='_blank' rel='noopener noreferrer'>VIEW PROJECT</ProjectButton>
-                            )}
-                            <ProjectButton href={project.github} target='_blank' rel='noopener noreferrer'>VIEW CODE</ProjectButton>
-                        </ProjectInfo>
-                    </PortfolioProject>
-                ))}
-            </PortfolioProjects>
-        </PortfolioContent>
-    </PortfolioWrapper>
+    <Section id='portfolio' title='Portfolio' bgColor='silverColor'>
+        <PortfolioProjects>
+            {projects.map(project => (
+                <PortfolioProject key={project.id}>
+                    <ProjectImage className='lozad' data-src={project.image} alt={project.name} />
+                    <ProjectInfo>
+                        <ProjectName>{project.name}</ProjectName>
+                        {project.link && (
+                            <ProjectButton href={project.link} target='_blank' rel='noopener noreferrer'>VIEW PROJECT</ProjectButton>
+                        )}
+                        <ProjectButton href={project.github} target='_blank' rel='noopener noreferrer'>VIEW CODE</ProjectButton>
+                    </ProjectInfo>
+                </PortfolioProject>
+            ))}
+        </PortfolioProjects>
+    </Section>
 )
 export default Portfolio;

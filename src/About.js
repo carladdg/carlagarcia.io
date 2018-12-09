@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import Section from './Section';
 
-const AboutWrapper = styled.section`
-    min-height: 100%;
+const AboutDescription = styled.p`
 `
 
 const About = () => (
-    <AboutWrapper id='about'>
-        About
-    </AboutWrapper>
+    <Section id='about' title='About Me' accentColor='silverColor'>
+        <AboutDescription>Hello, world</AboutDescription>
+    </Section>
 )
 export default About;
