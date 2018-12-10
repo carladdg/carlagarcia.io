@@ -10,6 +10,7 @@ const StyledNav = styled.nav`
     width: 100%;
     background-color: ${props => props.scroll ? 'rgba(0, 0, 0, 0.3)' : 'transparent'};
     font-family: ${props => props.theme.karlaFont};
+    font-size: 1.15em;
     transition: background-color 1s;
 
     @media screen and (max-width: 485px) {

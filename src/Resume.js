@@ -1,14 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const ResumeWrapper = styled.section`
-    min-height: 100%;
-    background-color: ${props => props.theme.navyColor};
-`
+import Section from './Section';
 
 const Resume = () => (
-    <ResumeWrapper id='resume'>
-        Resume
-    </ResumeWrapper>
+    <Section id='resume' title='Resume' bgColor='navyColor' accentColor='silverColor'>
+    </Section>
 )
 export default Resume;

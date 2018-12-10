@@ -21,13 +21,13 @@ const SectionTitle = styled.h1`
     border-bottom: 3px solid ${props => props.accentColor ? props.theme[props.accentColor] : 'white'};
     font-family: ${props => props.theme.latoFont};
     font-size: 2em;
-    color: ${props => props.theme.navyColor};
+    color: ${props => props.titleColor ? props.theme[props.titleColor] : 'white'};
 `
 
 const Section = props => (
     <SectionWrapper id={props.id} bgColor={props.bgColor}>
         <SectionContent>
-            <SectionTitle accentColor={props.accentColor}>{props.title}</SectionTitle>
+            <SectionTitle titleColor={props.titleColor} accentColor={props.accentColor}>{props.title}</SectionTitle>
             {props.children}
         </SectionContent>
     </SectionWrapper>

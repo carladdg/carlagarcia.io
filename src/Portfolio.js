@@ -90,7 +90,7 @@ const ProjectButton = styled.a`
 `
 
 const Portfolio = () => (
-    <Section id='portfolio' title='Portfolio' bgColor='silverColor'>
+    <Section id='portfolio' title='Portfolio' bgColor='silverColor' titleColor='navyColor'>
         <PortfolioProjects>
             {projects.map(project => (
                 <PortfolioProject key={project.id}>
