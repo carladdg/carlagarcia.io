@@ -82,7 +82,7 @@ class Nav extends Component {
         this.state = {
             scroll: false,
             toggle: false,
-            logo: './favicon.png'
+            logo: './logos/logo-navy.png'
         }
     }
 
@@ -93,12 +93,12 @@ class Nav extends Component {
         if (scroll > 0) {
             this.setState({ 
                 scroll: true,
-                logo: './favicon-white.png'
+                logo: './logos/logo-white.png'
             });
         } else if (scroll === 0) {
             this.setState({ 
                 scroll: false,
-                logo: './favicon.png'
+                logo: './logos/logo-navy.png'
             });
         }
     }

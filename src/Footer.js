@@ -9,7 +9,7 @@ const StyledFooter = styled.footer`
 `
 
 const FooterLogo = styled.img`
-    width: 22px;
+    width: 25px;
     padding-left: 10px;
 
     :hover {
@@ -22,7 +22,7 @@ const Footer = () => (
     <StyledFooter>
         <code>Built by</code>
         <a href='https://github.com/carladdg/' target='_blank' rel='noopener noreferrer'>
-            <FooterLogo src='./favicon.png' alt='Carla Garcia' />
+            <FooterLogo src='./logos/logo-navy.png' alt='Carla Garcia' />
         </a>
     </StyledFooter>
 )
