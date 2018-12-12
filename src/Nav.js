@@ -11,7 +11,7 @@ const StyledNav = styled.nav`
     background-color: ${props => props.scroll ? 'rgba(0, 0, 0, 0.3)' : 'transparent'};
     font-family: ${props => props.theme.karlaFont};
     font-size: 1.1em;
-    transition: background-color 1s;
+    transition: background-color 0.5s;
 
     @media screen and (max-width: 485px) {
         justify-content: space-between;

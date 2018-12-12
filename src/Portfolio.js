@@ -15,7 +15,7 @@ const PortfolioProject = styled.div`
     min-width: 350px;
     margin: 0 15px 25px;
     border-radius: 25px;
-    transition: 0.7s;
+    transition: 0.5s;
 
     @media screen and (max-width: 400px) {
         height: 220px;
@@ -62,7 +62,7 @@ const ProjectName = styled.p`
     font-family: ${props => props.theme.latoFont};
     font-size: 1.5em;
     color: ${props => props.theme.silverColor};
-    transition: font-size 0.7s;
+    transition: font-size 0.5s;
 
     @media screen and (max-width: 360px) {
         font-size: 1.25em;
@@ -77,7 +77,7 @@ const ProjectButton = styled.a`
     font-family: ${props => props.theme.karlaFont};
     color: ${props => props.theme.silverColor};
     text-decoration: none;
-    transition: color 0.3s, background-color 0.7s, font-size 0.7s;
+    transition: color 0.3s, background-color 0.5s, font-size 0.5s;
 
     :hover {
         background-color: ${props => props.theme.silverColor};

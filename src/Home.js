@@ -44,7 +44,7 @@ const SharedTextStyle = css`
     margin: 0;
     padding: 15px 30px;
     animation: ${fadeIn} 3s;
-    transition: font-size 0.7s;
+    transition: font-size 0.5s;
 `
 
 const StyledName = styled.h1`
