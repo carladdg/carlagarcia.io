@@ -8,23 +8,22 @@ const PortfolioProjects = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 3%;
 `
 
 const PortfolioProject = styled.div`
     position: relative;
-    height: 250px;
-    min-width: 350px;
+    height: 232px;
+    min-width: 325px;
     margin: 0 8px 16px;
     transition: 0.5s;
 
-    @media screen and (max-width: 400px) {
-        height: 220px;
+    @media screen and (max-width: 405px) {
+        height: 214px;
         min-width: 300px;
     }
-    @media screen and (max-width: 360px) {
-        height: 180px;
-        min-width: 250px;
+    @media screen and (max-width: 374px) {
+        height: 175px;
+        min-width: 244px;
     }
 `
 
@@ -59,12 +58,12 @@ const ProjectName = styled.p`
     padding: 10px;
     text-align: center;
     font-family: ${props => props.theme.latoFont};
-    font-size: 1.5em;
+    font-size: 1.25em;
     color: ${props => props.theme.silverColor};
-    transition: font-size 0.5s;
+    transition: font-size 0.3s;
 
-    @media screen and (max-width: 360px) {
-        font-size: 1.25em;
+    @media screen and (max-width: 374px) {
+        font-size: 1.1em;
     }
 `
 
@@ -73,7 +72,7 @@ const ProjectButton = styled.a`
     margin: 5px;
     padding: 10px 30px;
 
-    @media screen and (max-width: 360px) {
+    @media screen and (max-width: 374px) {
         font-size: 0.8em;
     }
 `

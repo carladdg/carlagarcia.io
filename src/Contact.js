@@ -1,14 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const ContactWrapper = styled.section`
-    min-height: 100%;
-    background-color: green;
-`
+import Section from './Section';
 
 const Contact = () => (
-    <ContactWrapper id='contact'>
+    <Section id='contact' title='Contact Me' bgColor='silverColor' titleColor='navyColor'>
         Contact
-    </ContactWrapper>
+    </Section>
 )
 export default Contact;

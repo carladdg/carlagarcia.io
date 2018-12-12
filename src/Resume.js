@@ -16,8 +16,8 @@ const ResumeContainer = styled.div`
 `
 
 const ResumeImage = styled.img`
-    width: 100%;
     height: 100%;
+    width: 100%;
 `
 
 const ResumeButton = styled.a`
