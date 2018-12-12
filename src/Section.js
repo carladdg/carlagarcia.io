@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SectionWrapper = styled.section`
-    min-height: 100%;
     background-color: ${props => props.bgColor ? props.theme[props.bgColor] : 'white'};
 `
 

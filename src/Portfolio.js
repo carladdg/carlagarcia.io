@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import projects from './projects.json';
 import Section from './Section';
+import Button from './Button';
 
 const PortfolioProjects = styled.div`
     display: flex;
@@ -13,7 +14,7 @@ const PortfolioProject = styled.div`
     position: relative;
     height: 250px;
     min-width: 350px;
-    margin: 0 15px 25px;
+    margin: 0 15px 16px;
     border-radius: 25px;
     transition: 0.5s;
 
@@ -70,19 +71,8 @@ const ProjectName = styled.p`
 `
 
 const ProjectButton = styled.a`
+    ${Button};
     margin: 5px;
-    padding: 10px 30px;
-    border: 2px solid ${props => props.theme.silverColor};
-    border-radius: 5px;
-    font-family: ${props => props.theme.karlaFont};
-    color: ${props => props.theme.silverColor};
-    text-decoration: none;
-    transition: color 0.3s, background-color 0.5s, font-size 0.5s;
-
-    :hover {
-        background-color: ${props => props.theme.silverColor};
-        color: ${props => props.theme.navyColor};
-    }
 
     @media screen and (max-width: 360px) {
         font-size: 0.8em;
