@@ -7,7 +7,12 @@ const ResumeContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 10%;
+    margin: 0 15%;
+    transition: margin 0.5s;
+
+    @media screen and (max-width: 1200px) {
+        margin: 0 3%;
+    }
 `
 
 const ResumeImage = styled.img`
@@ -28,7 +33,7 @@ const ResumeButton = styled.a`
 const Resume = () => (
     <Section id='resume' title='Resume' bgColor='navyColor' accentColor='silverColor'>
         <ResumeContainer>
-            <ResumeImage src='./resumes/resume.jpg' alt='Resume' />
+            <ResumeImage className='lozad' data-src='./resumes/resume.jpg' alt='Resume' />
             <ResumeButton href='./resumes/CGARCIA_Resume.pdf' download>Download PDF</ResumeButton>
         </ResumeContainer>
     </Section>

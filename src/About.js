@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Section from './Section';
 
 const AboutDescription = styled.div`
-    margin: 0 7%;
+    margin: 0 5%;
 `
 
 const AboutText = styled.p`
@@ -27,7 +27,7 @@ const AboutImage = styled.img`
     max-width: 250px;
     padding: 0 5px;
 
-    @media screen and (max-width: 1180px) {
+    @media screen and (max-width: 1160px) {
         height: 45%;
         width: 45%;
 
@@ -41,7 +41,7 @@ const ForceBreak = styled.div`
     display: none;
     flex-basis: 100%;
 
-    @media screen and (max-width: 1180px) {
+    @media screen and (max-width: 1160px) {
         display: block;
     }
 `
@@ -59,11 +59,11 @@ const About = () => (
                 In early 2018, I enrolled in the Northwestern University <b>Coding Boot Camp</b>, a six-month course that I completed while still working full-time. Programming was a big shift for me, but it took only a few class sessions before I was hooked. I loved seeing my code come to life on screen and constantly discovering new ways to improve and refactor. It quickly became clear that I wanted to pursue software development as a career, and I hope to begin a master’s in computer science program in 2019.
             </AboutText>
             <AboutImages>
-                <AboutImage src='./about_images/about1.jpg' alt='About Me 1'></AboutImage>
-                <AboutImage src='./about_images/about2.jpg' alt='About Me 2'></AboutImage>
+                <AboutImage className='lozad' data-src='./about_images/about1.jpg' alt='About Me 1'></AboutImage>
+                <AboutImage className='lozad' data-src='./about_images/about2.jpg' alt='About Me 2'></AboutImage>
                 <ForceBreak />
-                <AboutImage src='./about_images/about3.jpg' alt='About Me 3'></AboutImage>
-                <AboutImage src='./about_images/about4.jpg' alt='About Me 4'></AboutImage>
+                <AboutImage className='lozad' data-src='./about_images/about3.jpg' alt='About Me 3'></AboutImage>
+                <AboutImage className='lozad' data-src='./about_images/about4.jpg' alt='About Me 4'></AboutImage>
             </AboutImages>
             <AboutText>
                 Right now, I typically build web applications using the <b>MERN stack</b> (MongoDB, Express, React and Node.js) and, of course, HTML/CSS. I also have experience working with Git, jQuery, MySQL and Handlebars. My next goals are to learn Java in order to improve my understanding of statically- and strongly-typed languages, and to introduce automated testing into my process.
