@@ -35,7 +35,6 @@ const HomeContent = styled.div`
 
 const HomeTextBackground = styled.div`
     margin-bottom: 20px;
-    border-radius: 5px;
     background-color: ${props => props.theme.silverColor};
     animation: ${dropIn} 2s, ${fadeIn} 3s;
 `

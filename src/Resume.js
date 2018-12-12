@@ -23,6 +23,7 @@ const ResumeImage = styled.img`
 const ResumeButton = styled.a`
     ${Button};
     margin: 50px 0 16px;
+    padding: 20px 30px;
     font-size: 1.25em;
 
     @media screen and (max-width: 340px) {

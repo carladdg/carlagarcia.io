@@ -8,14 +8,14 @@ const PortfolioProjects = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0 3%;
 `
 
 const PortfolioProject = styled.div`
     position: relative;
     height: 250px;
     min-width: 350px;
-    margin: 0 15px 16px;
-    border-radius: 25px;
+    margin: 0 8px 16px;
     transition: 0.5s;
 
     @media screen and (max-width: 400px) {
@@ -33,7 +33,6 @@ const ProjectImage = styled.img`
     z-index: 10;
     height: 100%;
     width: 100%;
-    border-radius: 25px;
 `
 
 const ProjectInfo = styled.div`
@@ -46,7 +45,6 @@ const ProjectInfo = styled.div`
     align-items: center;
     height: 100%;
     width: 100%;
-    border-radius: 25px;
     background-color: rgba(0, 0, 30, 0.93);
     opacity: 0;
     transition: opacity 0.3s;
@@ -73,6 +71,7 @@ const ProjectName = styled.p`
 const ProjectButton = styled.a`
     ${Button};
     margin: 5px;
+    padding: 10px 30px;
 
     @media screen and (max-width: 360px) {
         font-size: 0.8em;
