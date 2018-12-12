@@ -13,7 +13,7 @@ import Footer from './Footer';
 const theme = {
     navyColor: '#343959',
     silverColor: '#e7e7e7',
-    pinkColor: '#FA7C92',
+    redColor: '#C5241C',
     karlaFont: 'Karla, sans-serif',
     latoFont: 'Lato, sans-serif',
 }

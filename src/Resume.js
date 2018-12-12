@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Section from './Section';
 import Button from './Button';
 
-const ResumeContainer = styled.div`
+const ResumeWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,10 +33,10 @@ const ResumeButton = styled.a`
 
 const Resume = () => (
     <Section id='resume' title='Resume' bgColor='navyColor' accentColor='silverColor'>
-        <ResumeContainer>
+        <ResumeWrapper>
             <ResumeImage className='lozad' data-src='./resumes/resume.jpg' alt='Resume' />
             <ResumeButton href='./resumes/CGARCIA_Resume.pdf' download>Download PDF</ResumeButton>
-        </ResumeContainer>
+        </ResumeWrapper>
     </Section>
 )
 export default Resume;

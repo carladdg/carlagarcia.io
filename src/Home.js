@@ -39,15 +39,15 @@ const HomeTextBackground = styled.div`
     animation: ${dropIn} 2s, ${fadeIn} 3s;
 `
 
-const SharedTextStyle = css`
+const HomeTextStyle = css`
     margin: 0;
     padding: 15px 30px;
     animation: ${fadeIn} 3s;
     transition: font-size 0.5s;
 `
 
-const StyledName = styled.h1`
-    ${SharedTextStyle}
+const HomeName = styled.h1`
+    ${HomeTextStyle}
     font-family: ${props => props.theme.latoFont};
     font-size: 3em;
 
@@ -56,8 +56,8 @@ const StyledName = styled.h1`
     }
 `
 
-const StyledBlurb = styled.p`
-    ${SharedTextStyle}
+const HomeBlurb = styled.p`
+    ${HomeTextStyle}
     font-family: ${props => props.theme.karlaFont};
     font-size: 1.25em;
 
@@ -70,10 +70,10 @@ const Home = () => (
     <HomeWrapper id='home'>
         <HomeContent>
             <HomeTextBackground>
-                <StyledName>Carla Garcia</StyledName>
+                <HomeName>Carla Garcia</HomeName>
             </HomeTextBackground>
             <HomeTextBackground>
-                <StyledBlurb>full-stack web developer</StyledBlurb>
+                <HomeBlurb>full-stack web developer</HomeBlurb>
             </HomeTextBackground>
         </HomeContent>
     </HomeWrapper>
