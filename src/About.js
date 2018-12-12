@@ -21,49 +21,19 @@ const AboutImages = styled.div`
 `
 
 const AboutImage = styled.img`
-    height: 250px;
-    width: 250px;
+    height: 23%;
+    width: 23%;
+    max-height: 250px;
+    max-width: 250px;
     padding: 0 5px;
 
-    @media screen and (max-width: 1410px) {
-        height: 225px;
-        width: 225px;
-    }
-    @media screen and (max-width: 1295px) {
-        height: 200px;
-        width: 200px;
-    }
     @media screen and (max-width: 1180px) {
-        height: 250px;
-        width: 250px;
+        height: 45%;
+        width: 45%;
 
         :nth-child(4), :nth-child(5) {
             padding-top: 10px;
         }
-    }
-    @media screen and (max-width: 805px) {
-        height: 225px;
-        width: 225px;
-    }
-    @media screen and (max-width: 750px) {
-        height: 200px;
-        width: 200px;
-    }
-    @media screen and (max-width: 550px) {
-        height: 175px;
-        width: 175px;
-    }
-    @media screen and (max-width: 495px) {
-        height: 150px;
-        width: 150px;
-    }
-    @media screen and (max-width: 435px) {
-        height: 125px;
-        width: 125px;
-    }
-    @media screen and (max-width: 375px) {
-        height: 100px;
-        width: 100px;
     }
 `
 
@@ -89,11 +59,11 @@ const About = () => (
                 In early 2018, I enrolled in the Northwestern University <b>Coding Boot Camp</b>, a six-month course that I completed while still working full-time. Programming was a big shift for me, but it took only a few class sessions before I was hooked. I loved seeing my code come to life on screen and constantly discovering new ways to improve and refactor. It quickly became clear that I wanted to pursue software development as a career, and I hope to begin a master’s in computer science program in 2019.
             </AboutText>
             <AboutImages>
-                <AboutImage src='./about_images/test.jpg' alt='test1'></AboutImage>
-                <AboutImage src='./about_images/test2.jpg' alt='test2'></AboutImage>
+                <AboutImage src='./about_images/about1.jpg' alt='About Me 1'></AboutImage>
+                <AboutImage src='./about_images/about2.jpg' alt='About Me 2'></AboutImage>
                 <ForceBreak />
-                <AboutImage src='./about_images/test3.jpg' alt='test3'></AboutImage>
-                <AboutImage src='./about_images/test4.jpg' alt='test4'></AboutImage>
+                <AboutImage src='./about_images/about3.jpg' alt='About Me 3'></AboutImage>
+                <AboutImage src='./about_images/about4.jpg' alt='About Me 4'></AboutImage>
             </AboutImages>
             <AboutText>
                 Right now, I typically build web applications using the <b>MERN stack</b> (MongoDB, Express, React and Node.js) and, of course, HTML/CSS. I also have experience working with Git, jQuery, MySQL and Handlebars. My next goals are to learn Java in order to improve my understanding of statically- and strongly-typed languages, and to introduce automated testing into my process.
