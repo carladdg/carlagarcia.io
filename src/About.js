@@ -5,7 +5,8 @@ import Section from './Section';
 const AboutDescription = styled.p`
     margin: 16px 12%;
     font-family: ${props => props.theme.karlaFont};
-    font-size: 1.15em;
+    font-size: 1.1em;
+    line-height: 1.4em;
     color: ${props => props.theme.navyColor};
 `
 
@@ -27,10 +28,10 @@ const About = () => (
             Hello and welcome to my website! I’m <b>Carla</b>: a clumsy, curious, curly-haired coding enthusiast who’s crazy for comedy flicks and chocolate. I also tend to overuse alliteration.
         </AboutDescription>
         <AboutDescription>
-            Nulla iaculis, ipsum sit amet consectetur blandit, sem nunc maximus augue, eget porta risus orci ac mauris. Vivamus molestie sapien ut velit consequat pharetra. Aliquam malesuada neque volutpat sem vulputate varius. Morbi eu vulputate tellus. Curabitur nec auctor lectus. Phasellus neque neque, suscipit nec ultrices in, convallis non purus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+            Born and raised in the Philippines, I moved to Evanston, IL in 2013 to attend <b>Northwestern University</b>. I graduated in 2017 with a bachelor’s degree in journalism, a second major in psychology and an integrated marketing communications certificate. I then worked for a year as a brand planner at Chicago-based advertising agency <b>Cramer-Krasselt</b>. In this role, I honed my research and critical thinking skills as I developed campaign strategies for various clients.
         </AboutDescription>
         <AboutDescription>
-            Sed quis egestas magna. Nunc accumsan a tortor quis commodo. Quisque porta turpis a elit feugiat, vitae vulputate magna pretium. Donec orci lorem, maximus vehicula rhoncus vitae, mollis eget augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus eget risus gravida, volutpat tellus et, elementum ligula. Curabitur ut nisl dictum, iaculis nisl pharetra, ultrices dolor. Morbi eget mi ac felis pretium ultricies nec at ante.
+            In early 2018, I enrolled in the Northwestern University <b>Coding Boot Camp</b>, a six-month course that I completed while still working full-time. Programming was a big shift for me, but it took only a few class sessions before I was hooked. I loved seeing my code come to life on screen and constantly discovering new ways to improve and refactor. It quickly became clear that I wanted to pursue software development as a career, and I hope to begin a master’s in computer science program in 2019.
         </AboutDescription>
         <AboutImages>
             <AboutImage src='./about_images/test.jpg' alt='test1'></AboutImage>
@@ -39,10 +40,10 @@ const About = () => (
             <AboutImage src='./about_images/test4.jpg' alt='test4'></AboutImage>
         </AboutImages>
         <AboutDescription>
-            Cras eu nibh nec urna iaculis sodales ac at turpis. Etiam convallis varius diam id vestibulum. Donec ac magna neque. Donec in tortor at est faucibus malesuada sed vitae leo. Pellentesque rutrum enim eros, sit amet fermentum arcu pulvinar ac. Nunc ac elementum sapien, imperdiet vehicula nibh. Nulla ut mauris quis diam viverra fermentum. Phasellus laoreet ex et sodales posuere. Etiam id rhoncus justo.
+            Right now, I typically build web applications using the <b>MERN stack</b> (MongoDB, Express, React and Node.js) and, of course, HTML/CSS. I also have experience working with Git, jQuery, MySQL and Handlebars. My next goals are to learn Java in order to improve my understanding of statically- and strongly-typed languages, and to introduce automated testing into my process.
         </AboutDescription>
         <AboutDescription>
-            Quisque tempor faucibus maximus. Maecenas convallis a massa eget dignissim. Proin viverra mauris ut justo tincidunt, non maximus orci feugiat. Nam at est rutrum, scelerisque enim sit amet, consequat nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nunc erat, iaculis a ultrices non, hendrerit molestie turpis. Suspendisse laoreet lobortis turpis. Vestibulum euismod venenatis tincidunt. Donec vel massa porttitor, sollicitudin arcu a, posuere lacus. Maecenas vitae mauris malesuada, imperdiet sapien nec, rutrum leo. Aliquam erat volutpat. Donec euismod facilisis lacus non venenatis.
+            I enjoy creating things that are fun and easy to use, solve a problem or two and teach me something along the way. Feel free to check out some of my recent work below! My current favorite is <b>SETLISTr</b>, a site that lets you create Spotify playlists of artists’ most recent concert set lists. While it started as a boot camp group project, I plan to continue developing it independently. As an avid concertgoer, I’ve always wanted a tool like this to help me get psyched up for live shows – and I’m so excited that I was able to build it for myself.
         </AboutDescription>
     </Section>
 )
