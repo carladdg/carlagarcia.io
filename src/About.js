@@ -2,8 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import Section from './Section';
 
+const TestDiv = styled.div`
+    margin: 0 7%;
+`
+
 const AboutDescription = styled.p`
-    margin: 16px 12%;
+    // margin: 16px 10%;
     font-family: ${props => props.theme.karlaFont};
     font-size: 1.1em;
     line-height: 1.4em;
@@ -20,10 +24,57 @@ const AboutImage = styled.img`
     height: 250px;
     width: 250px;
     padding: 10px 5px;
+
+    @media screen and (max-width: 1410px) {
+        height: 225px;
+        width: 225px;
+    }
+    @media screen and (max-width: 1295px) {
+        height: 200px;
+        width: 200px;
+    }
+    @media screen and (max-width: 1180px) {
+        height: 250px;
+        width: 250px;
+    }
+    @media screen and (max-width: 805px) {
+        height: 225px;
+        width: 225px;
+    }
+    @media screen and (max-width: 750px) {
+        height: 200px;
+        width: 200px;
+    }
+    @media screen and (max-width: 550px) {
+        height: 175px;
+        width: 175px;
+    }
+    @media screen and (max-width: 495px) {
+        height: 150px;
+        width: 150px;
+    }
+    @media screen and (max-width: 435px) {
+        height: 125px;
+        width: 125px;
+    }
+    @media screen and (max-width: 375px) {
+        height: 100px;
+        width: 100px;
+    }
+`
+
+const ForceBreak = styled.div`
+    display: none;
+    flex-basis: 100%;
+
+    @media screen and (max-width: 1180px) {
+        display: block;
+    }
 `
 
 const About = () => (
     <Section id='about' title='About Me' titleColor='navyColor' accentColor='silverColor'>
+        <TestDiv>
         <AboutDescription>
             Hello and welcome to my website! I’m <b>Carla</b>: a clumsy, curious, curly-haired coding enthusiast who’s crazy for comedy flicks and chocolate. I also tend to overuse alliteration.
         </AboutDescription>
@@ -36,6 +87,7 @@ const About = () => (
         <AboutImages>
             <AboutImage src='./about_images/test.jpg' alt='test1'></AboutImage>
             <AboutImage src='./about_images/test2.jpg' alt='test2'></AboutImage>
+            <ForceBreak />
             <AboutImage src='./about_images/test3.jpg' alt='test3'></AboutImage>
             <AboutImage src='./about_images/test4.jpg' alt='test4'></AboutImage>
         </AboutImages>
@@ -45,6 +97,7 @@ const About = () => (
         <AboutDescription>
             I enjoy creating things that are fun and easy to use, solve a problem or two and teach me something along the way. Feel free to check out some of my recent work below! My current favorite is <b>SETLISTr</b>, a site that lets you create Spotify playlists of artists’ most recent concert set lists. While it started as a boot camp group project, I plan to continue developing it independently. As an avid concertgoer, I’ve always wanted a tool like this to help me get psyched up for live shows – and I’m so excited that I was able to build it for myself.
         </AboutDescription>
+        </TestDiv>
     </Section>
 )
 export default About;

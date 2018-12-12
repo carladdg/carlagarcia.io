@@ -8,9 +8,9 @@ const SectionWrapper = styled.section`
 
 const SectionContent = styled.div`
     padding: 85px 100px 75px;
-    transition: padding 0.7s;
+    transition: padding 0.5s;
 
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 690px) {
         padding: 85px 30px 75px;
     }
 `
