@@ -1,8 +1,71 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import Section from './Section';
+import Button from './Button';
+
+const ContactWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 5%;
+`
+
+const ContactForm = styled.form`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1000px;
+`
+
+const FormLabel = styled.label`
+    padding-bottom: 10px;
+    font-family: ${props => props.theme.latoFont};
+    font-size: 1.25em;
+    color: ${props => props.theme.navyColor};
+`
+
+const FormTextStyle = css`
+    margin-bottom: 20px;
+    padding: 15px;
+    font-family: ${props => props.theme.karlaFont};
+    font-size: 1.1em;
+    color: ${props => props.theme.navyColor}
+`
+
+const FormInput = styled.input`
+    ${FormTextStyle}
+`
+
+const FormTextarea = styled.textarea`
+    ${FormTextStyle}
+    height: 250px;
+    resize: vertical;
+`
+
+const FormSubmit = styled.input`
+    ${Button}
+    align-self: flex-end;
+    padding: 10px 30px;
+    font-size: 1.1em;
+`
+
+const SubmissionResult = styled.p`
+    margin: 20px 0 0;
+    font-family: ${props => props.theme.latoFont};
+    font-size: 1.1em;
+    color: ${props => props.success ? 'green' : 'red'};
+`
+
+const SocialIcons = styled.div`
+    margin-top: 50px
+    padding: 32px 32px 0;
+    border-top: 1px solid ${props => props.theme.navyColor}
+`
 
 const SocialIconStyle = css`
+    padding: 16px 8px;
+    font-size: 4em;
+
     :hover {
         -webkit-filter: drop-shadow(0 0 2px ${props => props.theme.navyColor});
         filter: drop-shadow(0 0 2px ${props => props.theme.navyColor});
@@ -34,7 +97,10 @@ class Contact extends Component {
         this.state = {
             name: '',
             email: '',
-            message: ''
+            message: '',
+            submitAttempt: false,
+            inputError: false,
+            submitError: false
         }
     }
 
@@ -53,38 +119,68 @@ class Contact extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
+        this.setState({ submitAttempt: true });
+        
+        if (this.state.name && this.state.email && this.state.message) {
+            this.setState({ inputError: false });
 
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded'},
-            body: this.encode({ 'form-name': 'Contact', ...this.state })
-        })
-            .then(() => alert('Success!'))
-            .catch(error => alert(error));
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: this.encode({ 'form-name': 'Contact', 'name': this.state.name, 'email': this.state.email, 'message': this.state.message })
+            })
+                .then(() => {
+                    this.setState({ 
+                        submitError: false,
+                        name: '',
+                        email: '',
+                        message: ''
+                    })
+                })
+                .catch(error => {
+                    console.log(error);
+                    this.setState({ submitError: true });
+                });
+        } else {
+            this.setState({ inputError: true })
+        }
+    }
+
+    renderSubmissionResult = () => {
+        if (this.state.inputError) {
+            return <SubmissionResult>Please fill out all fields.</SubmissionResult> 
+        } else if (this.state.submitError) {
+            return <SubmissionResult>Sorry, something went wrong. Please try again.</SubmissionResult>
+        } else if (!this.state.submitError) {
+            return <SubmissionResult success>Message sent. I'll get back to you soon!</SubmissionResult>
+        }
     }
 
     render = () => (
         <Section id='contact' title='Contact Me' bgColor='silverColor' titleColor='navyColor'>
-            <form onSubmit={this.handleFormSubmit}>
-                <label htmlFor='name'>Name</label>
-                <input type='text' id='name' name='name' value={this.state.name} onChange={this.handleInputChange} />
-                <label htmlFor='email'>Email</label>
-                <input type='email' id='email' name='email' value={this.state.email} onChange={this.handleInputChange} />
-                <label htmlFor='message'>Message</label>
-                <textarea id='message' name='message' value={this.state.message} onChange={this.handleInputChange}></textarea>
-                <input id='submit' type='submit' value='Submit' />
-            </form>
-            <div>
-                <a href='https://www.linkedin.com/in/carladdg/' target='_blank' rel='noopener noreferrer'>
-                    <LinkedIn className="fab fa-linkedin fa-3x"></LinkedIn>
-                </a>
-                <a href='https://github.com/carladdg' target='_blank' rel='noopener noreferrer'>
-                    <GitHub className="fab fa-github fa-3x"></GitHub>
-                </a>
-                <a href='https://www.instagram.com/carladdg/' target='_blank' rel='noopener noreferrer'>
-                    <Instagram className="fab fa-instagram fa-3x"></Instagram>
-                </a>
-            </div>
+            <ContactWrapper>
+                <ContactForm onSubmit={this.handleFormSubmit}>
+                    <FormLabel htmlFor='name'>Name</FormLabel>
+                    <FormInput type='text' id='name' name='name' value={this.state.name} onChange={this.handleInputChange} />
+                    <FormLabel htmlFor='email'>Email</FormLabel>
+                    <FormInput type='email' id='email' name='email' value={this.state.email} onChange={this.handleInputChange} />
+                    <FormLabel htmlFor='message'>Message</FormLabel>
+                    <FormTextarea id='message' name='message' value={this.state.message} onChange={this.handleInputChange} />
+                    <FormSubmit id='submit' type='submit' value='Submit' dark />
+                </ContactForm>
+                {this.state.submitAttempt && this.renderSubmissionResult()}
+                <SocialIcons>
+                    <a href='https://www.linkedin.com/in/carladdg/' target='_blank' rel='noopener noreferrer'>
+                        <LinkedIn className='fab fa-linkedin'></LinkedIn>
+                    </a>
+                    <a href='https://github.com/carladdg' target='_blank' rel='noopener noreferrer'>
+                        <GitHub className='fab fa-github'></GitHub>
+                    </a>
+                    <a href='https://www.instagram.com/carladdg/' target='_blank' rel='noopener noreferrer'>
+                        <Instagram className='fab fa-instagram'></Instagram>
+                    </a>
+                </SocialIcons>
+            </ContactWrapper>
         </Section>
     )
 }
