@@ -26,6 +26,7 @@ const FormLabel = styled.label`
 
 const FormTextStyle = css`
     margin-bottom: 20px;
+    border: 1px solid white;
     padding: 15px;
     font-family: ${props => props.theme.karlaFont};
     font-size: 1.1em;
@@ -59,7 +60,7 @@ const SubmissionResult = styled.p`
 const SocialIcons = styled.div`
     margin-top: 50px
     padding: 32px 32px 0;
-    border-top: 1px solid ${props => props.theme.navyColor}
+    border-top: 2px solid white;
 `
 
 const SocialIconStyle = css`
@@ -152,7 +153,7 @@ class Contact extends Component {
         } else if (this.state.submitError) {
             return <SubmissionResult>Sorry, something went wrong. Please try again.</SubmissionResult>
         } else if (!this.state.submitError) {
-            return <SubmissionResult success>Message sent. I'll get back to you soon!</SubmissionResult>
+            return <SubmissionResult success>Message sent!</SubmissionResult>
         }
     }
 
