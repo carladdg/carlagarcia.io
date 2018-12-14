@@ -14,8 +14,8 @@ const FooterLogo = styled.img`
     padding-left: 10px;
 
     :hover {
-        -webkit-filter: drop-shadow(0 0 2px ${props => props.theme.redColor});
-        filter: drop-shadow(0 0 2px ${props => props.theme.redColor});
+        -webkit-filter: drop-shadow(0 0 2px ${props => props.theme.navyColor});
+        filter: drop-shadow(0 0 2px ${props => props.theme.navyColor});
     }
 `
 
