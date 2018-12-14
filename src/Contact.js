@@ -170,6 +170,8 @@ class Contact extends Component {
     }
 
     renderSubmissionResult = () => {
+        setTimeout(this.clearSubmissionResult, 1000 * 15);
+
         if (this.state.inputError) {
             return <SubmissionResult>Please fill out all fields.</SubmissionResult> 
         } else if (this.state.submitError) {
@@ -178,6 +180,8 @@ class Contact extends Component {
             return <SubmissionResult success>Message sent!</SubmissionResult>
         }
     }
+
+    clearSubmissionResult = () => this.setState({ submitAttempt: false });
 
     render = () => (
         <Section id='contact' title='Contact Me' bgColor='silverColor' titleColor='navyColor'>
