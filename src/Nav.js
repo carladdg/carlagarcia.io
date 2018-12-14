@@ -15,7 +15,7 @@ const StyledNav = styled.nav`
 
     @media screen and (max-width: 485px) {
         justify-content: space-between;
-        align-items: ${props => props.toggle? 'flex-start' : 'center'};
+        align-items: ${props => props.toggle ? 'flex-start' : 'center'};
         padding: ${props => props.toggle ? '13px 0' : '0'};
     }
 `
@@ -27,6 +27,22 @@ const NavContent = styled.div`
     @media screen and (max-width: 485px) {
         flex-direction: ${props => props.toggle ? 'column' : 'row'};
         align-items: flex-start;
+    }
+`
+
+const NavLink = styled.a`
+    margin: 0 20px;
+    padding-bottom: 3px;
+    color: ${props => props.scroll ? 'white' : props.theme.navyColor};
+    text-decoration: none;
+
+    :hover {
+        border-bottom: 1px solid ${props => props.scroll ? props.theme.navyColor : 'white'};
+    }
+
+    @media screen and (max-width: 485px) {
+        display: ${props => props.toggle ? 'block' : 'none'};
+        margin-top: 5px;
     }
 `
 
@@ -47,22 +63,6 @@ const NavLogo = styled.img`
     width: 30px;
 `
 
-const NavLink = styled.a`
-    margin: 0 20px;
-    padding-bottom: 3px;
-    color: ${props => props.scroll ? 'white' : props.theme.navyColor};
-    text-decoration: none;
-
-    :hover {
-        border-bottom: 1px solid ${props => props.scroll ? props.theme.navyColor : 'white'};
-    }
-
-    @media screen and (max-width: 485px) {
-        display: ${props => props.toggle ? 'block' : 'none'};
-        margin-top: 5px;
-    }
-`
-
 const NavToggler = styled.i`
     display: none;
     margin: 0 20px;
@@ -72,7 +72,7 @@ const NavToggler = styled.i`
 
     @media screen and (max-width: 485px) {
         display: block;
-        padding-top: ${props => props.toggle ? '8px' : '0'};
+        padding-top: ${props => props.toggle ? '7px' : '0'};
     }
 `
 

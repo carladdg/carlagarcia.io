@@ -22,7 +22,7 @@ const FooterLogo = styled.img`
 const Footer = () => (
     <StyledFooter>
         <code>Built by</code>
-        <a href='https://github.com/carladdg/' target='_blank' rel='noopener noreferrer'>
+        <a href='https://github.com/carladdg/carlagarcia.io' target='_blank' rel='noopener noreferrer'>
             <FooterLogo src='./logos/logo-navy.png' alt='Carla Garcia' />
         </a>
     </StyledFooter>

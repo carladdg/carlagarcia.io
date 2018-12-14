@@ -20,7 +20,6 @@ const HomeWrapper = styled.section`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 30% 60%;
-    text-align: center;
     color: ${props => props.theme.navyColor};
     animation: ${fadeIn} 1s
 `
@@ -43,7 +42,7 @@ const HomeTextStyle = css`
     margin: 0;
     padding: 15px 30px;
     animation: ${fadeIn} 3s;
-    transition: font-size 0.5s;
+    transition: font-size 0.3s;
 `
 
 const HomeName = styled.h1`
@@ -62,7 +61,7 @@ const HomeBlurb = styled.p`
     font-size: 1.25em;
 
     @media screen and (max-width: 340px) {
-        font-size: 1em;
+        font-size: 1.1em;
     }
 `
 

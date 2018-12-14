@@ -22,15 +22,25 @@ const FormLabel = styled.label`
     font-family: ${props => props.theme.latoFont};
     font-size: 1.25em;
     color: ${props => props.theme.navyColor};
+    transition: font-size 0.3s;
+
+    @media screen and (max-width: 340px) {
+        font-size: 1.1em;
+    }
 `
 
 const FormTextStyle = css`
     margin-bottom: 20px;
-    border: 1px solid white;
     padding: 15px;
+    border: 1px solid white;
     font-family: ${props => props.theme.karlaFont};
     font-size: 1.1em;
     color: ${props => props.theme.navyColor}
+    transition: font-size 0.3s;
+
+    @media screen and (max-width: 340px) {
+        font-size: 1em;
+    }
 `
 
 const FormInput = styled.input`
@@ -48,23 +58,37 @@ const FormSubmit = styled.input`
     align-self: flex-end;
     padding: 10px 30px;
     font-size: 1.1em;
+
+    @media screen and (max-width: 340px) {
+        font-size: 1em;
+    }
 `
 
 const SubmissionResult = styled.p`
-    margin: 20px 0 0;
+    margin: 30px 0 0;
     font-family: ${props => props.theme.latoFont};
-    font-size: 1.1em;
-    color: ${props => props.success ? 'green' : 'red'};
+    font-size: 1.25em;
+    font-weight: 700;
+    color: ${props => props.success ? '#20a303' : 'red'};
+    transition: font-size 0.3s;
+
+    @media screen and (max-width: 340px) {
+        font-size: 1.1em;
+    }
 `
 
 const SocialIcons = styled.div`
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 322px;
     margin-top: 50px
-    padding: 32px 32px 0;
+    padding: 50px 0 16px;
     border-top: 2px solid white;
 `
 
 const SocialIconStyle = css`
-    padding: 16px 8px;
+    padding: 0 8px;
     font-size: 4em;
 
     :hover {
@@ -107,9 +131,7 @@ class Contact extends Component {
 
     handleInputChange = event => {
         const { name, value } = event.target;
-        this.setState({
-            [name]: value
-        })
+        this.setState({ [name]: value });
     }
 
     encode = data => {

@@ -6,7 +6,7 @@ const Button = css`
     font-family: ${props => props.theme.karlaFont};
     color: ${props => props.dark ? props.theme.navyColor : props.theme.silverColor};
     text-decoration: none;
-    transition: color 0.3s, background-color 0.5s;
+    transition: color 0.3s, background-color 0.5s, font-size: 0.3s;
 
     :hover {
         background-color: ${props => props.dark ? props.theme.navyColor : props.theme.silverColor};
