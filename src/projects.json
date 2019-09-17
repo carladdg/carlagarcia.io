@@ -3,8 +3,8 @@
         "id": 10,
         "name": "Jamspot Social Network",
         "image": "./project_images/jamspot.png",
-        "link": "http://jamspot-nu.herokuapp.com/",
-        "github": "https://github.com/curiouskittens/jamspot"
+        "link": "http://jamspot-cdg.herokuapp.com/",
+        "github": "https://github.com/carladdg/jamspot"
     },
     {
         "id": 9,
