@@ -66,7 +66,7 @@ const About = () => (
                 <AboutImage className='lozad' data-src='./about_images/about4.jpg' alt='About Me 4'></AboutImage>
             </AboutImages>
             <AboutText>
-                Right now, I typically build web applications using the <b>MERN stack</b> (MongoDB, Express, React and Node.js) and, of course, HTML/CSS. I also have experience working with Git, jQuery, MySQL and Handlebars. My next goals are to learn Java in order to improve my understanding of statically- and strongly-typed languages, and to introduce automated testing into my process.
+                Right now, I typically build web applications using the <b>MERN stack</b> (MongoDB, Express, React and Node.js) and, of course, HTML/CSS. I also have experience working with Java, Git, jQuery, MySQL and Handlebars. This quarter at UChicago, I will be learning more about <b> object-oriented programming, networks, and security </b>. Outside of the classroom, a personal goal is to introduce automated testing into my process.
             </AboutText>
             <AboutText>
                 I enjoy creating things that are fun and easy to use, solve a problem or two and teach me something along the way. Feel free to check out some of my recent work below! My current favorite is <b>SETLISTr</b>, a site that lets you create Spotify playlists of artists’ most recent concert set lists. While it started as a boot camp group project, I plan to continue developing it independently. As an avid concertgoer, I’ve always wanted a tool like this to help me get psyched up for live shows – and I’m so excited that I was able to build it for myself.
