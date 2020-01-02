@@ -3,7 +3,7 @@
         "id": 10,
         "name": "Jamspot Social Network",
         "image": "./project_images/jamspot.png",
-        "link": "https://jamspot-cdg.herokuapp.com/",
+        "link": "https://jamspot-nu.herokuapp.com/",
         "github": "https://github.com/carladdg/jamspot"
     },
     {
@@ -37,8 +37,8 @@
         "id": 5,
         "name": "Wanderlust Travel Helper",
         "image": "./project_images/wanderlust.png",
-        "link": "https://patsajax.github.io/wanderlust/",
-        "github": "https://github.com/patsajax/wanderlust"
+        "link": "https://carladdg.github.io/wanderlust/",
+        "github": "https://github.com/carladdg/wanderlust"
     },
     {
         "id": 4,
