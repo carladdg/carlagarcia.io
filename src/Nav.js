@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const StyledNav = styled.nav`
@@ -8,15 +8,15 @@ const StyledNav = styled.nav`
     z-index: 100;
     min-height: 60px;
     width: 100%;
-    background-color: ${props => props.scroll ? 'rgba(0, 0, 0, 0.3)' : 'transparent'};
+    background-color: ${props => props.isAtTopOfPage ? 'transparent' : 'rgba(0, 0, 0, 0.3)'};
     font-family: ${props => props.theme.karlaFont};
     font-size: 1.1em;
     transition: background-color 0.5s;
 
     @media screen and (max-width: 485px) {
         justify-content: space-between;
-        align-items: ${props => props.toggle ? 'flex-start' : 'center'};
-        padding: ${props => props.toggle ? '13px 0' : '0'};
+        align-items: ${props => props.isToggled ? 'flex-start' : 'center'};
+        padding: ${props => props.isToggled ? '13px 0' : '0'};
     }
 `
 
@@ -25,7 +25,7 @@ const NavContent = styled.div`
     align-items: center;
 
     @media screen and (max-width: 485px) {
-        flex-direction: ${props => props.toggle ? 'column' : 'row'};
+        flex-direction: ${props => props.isToggled ? 'column' : 'row'};
         align-items: flex-start;
     }
 `
@@ -33,15 +33,15 @@ const NavContent = styled.div`
 const NavLink = styled.a`
     margin: 0 20px;
     padding-bottom: 3px;
-    color: ${props => props.scroll ? 'white' : props.theme.navyColor};
+    color: ${props => props.isAtTopOfPage ? props.theme.navyColor : 'white'};
     text-decoration: none;
 
     :hover {
-        border-bottom: 1px solid ${props => props.scroll ? props.theme.navyColor : 'white'};
+        border-bottom: 1px solid ${props => props.isAtTopOfPage ? 'white' : props.theme.navyColor};
     }
 
     @media screen and (max-width: 485px) {
-        display: ${props => props.toggle ? 'block' : 'none'};
+        display: ${props => props.isToggled ? 'block' : 'none'};
         margin-top: 5px;
     }
 `
@@ -50,8 +50,8 @@ const NavLogoLink = styled.a`
     margin: 0 20px;
 
     :hover {
-        -webkit-filter: drop-shadow(0 0 2px ${props => props.scroll ? 'white' : props.theme.navyColor});
-        filter: drop-shadow(0 0 2px ${props => props.scroll ? 'white' : props.theme.navyColor});
+        -webkit-filter: drop-shadow(0 0 2px ${props => props.isAtTopOfPage ? props.theme.navyColor : 'white'});
+        filter: drop-shadow(0 0 2px ${props => props.isAtTopOfPage ? props.theme.navyColor : 'white'});
     }
 
     @media screen and (max-width: 485px) {
@@ -67,60 +67,49 @@ const NavToggler = styled.i`
     display: none;
     margin: 0 20px;
     padding-bottom: 3px;
-    color: ${props => props.scroll ? 'white' : props.theme.navyColor};
+    color: ${props => props.isAtTopOfPage ? props.theme.navyColor : 'white'};
     cursor: pointer;
 
     @media screen and (max-width: 485px) {
         display: block;
-        padding-top: ${props => props.toggle ? '7px' : '0'};
+        padding-top: ${props => props.isToggled ? '7px' : '0'};
     }
 `
 
-class Nav extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            scroll: false,
-            toggle: false,
-            logo: './logos/logo-navy.png'
+const Nav = () => {
+    const [isAtTopOfPage, setIsAtTopOfPage] = useState(true);
+    const [isToggled, setIsToggled] = useState(false);
+    const [logo, setLogo] = useState('./logos/logo-navy.png');
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+    }, [])
+
+    const handleScroll = () => {
+        let yPosition = window.pageYOffset;
+        if (yPosition > 0) {
+            setIsAtTopOfPage(false);
+            setLogo('./logos/logo-white.png');
+        } else if (yPosition === 0) {
+            setIsAtTopOfPage(true);
+            setLogo('./logos/logo-navy.png');
         }
     }
 
-    componentDidMount = () => window.addEventListener('scroll', this.handleScroll);
+    const handleToggle = () => setIsToggled(!isToggled);
 
-    handleScroll = () => {
-        let scroll = window.pageYOffset;
-        if (scroll > 0) {
-            this.setState({ 
-                scroll: true,
-                logo: './logos/logo-white.png'
-            });
-        } else if (scroll === 0) {
-            this.setState({ 
-                scroll: false,
-                logo: './logos/logo-navy.png'
-            });
-        }
-    }
-
-    handleToggle = () => {
-        this.setState(prevState => ({ 
-            toggle: !prevState.toggle 
-        }));
-    }
-    
-    render = () => (
-        <StyledNav scroll={this.state.scroll} toggle={this.state.toggle}>
-            <NavContent toggle={this.state.toggle}>
-                <NavLink scroll={this.state.scroll} toggle={this.state.toggle} href='#about'>ABOUT</NavLink>
-                <NavLink scroll={this.state.scroll} toggle={this.state.toggle} href='#portfolio'>PORTFOLIO</NavLink>        
-                <NavLogoLink scroll={this.state.scroll} href='#home'>
-                    <NavLogo src={this.state.logo} alt='Carla Garcia' />
+    return (
+        <StyledNav isAtTopOfPage={isAtTopOfPage} isToggled={isToggled}>
+            <NavContent isToggled={isToggled}>
+                <NavLink isAtTopOfPage={isAtTopOfPage} isToggled={isToggled} href='#about'>ABOUT</NavLink>
+                <NavLink isAtTopOfPage={isAtTopOfPage} isToggled={isToggled} href='#portfolio'>PORTFOLIO</NavLink>
+                <NavLogoLink isAtTopOfPage={isAtTopOfPage} href='#home'>
+                    <NavLogo src={logo} alt='Carla Garcia' />
                 </NavLogoLink>
-                <NavLink scroll={this.state.scroll} toggle={this.state.toggle} href='#resume'>RESUME</NavLink>
-                <NavLink scroll={this.state.scroll} toggle={this.state.toggle} href='#contact'>CONTACT</NavLink>
+                <NavLink isAtTopOfPage={isAtTopOfPage} isToggled={isToggled} href='#resume'>RESUME</NavLink>
+                <NavLink isAtTopOfPage={isAtTopOfPage} isToggled={isToggled} href='#contact'>CONTACT</NavLink>
             </NavContent>
-            <NavToggler onClick={this.handleToggle} scroll={this.state.scroll} toggle={this.state.toggle} className="fas fa-bars fa-lg"></NavToggler>
+            <NavToggler onClick={handleToggle} isAtTopOfPage={isAtTopOfPage} isToggled={isToggled} className="fas fa-bars fa-lg"></NavToggler>
         </StyledNav>
     )
 }
